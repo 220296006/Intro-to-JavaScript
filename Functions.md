@@ -85,7 +85,6 @@ When declaring a function, you specify the parameters. However, when calling a f
 
 For example, in the say() function, the message is the parameter and the 'Hello' string is an argument that corresponds to the message parameter.
 
-
 Returning a value
 Every function in JavaScript implicitly returns undefined unless you explicitly specify a return value. For example:
 
