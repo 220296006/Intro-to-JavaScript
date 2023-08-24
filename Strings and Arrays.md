@@ -147,6 +147,103 @@ myArray[2] = myCars;
 
 ```
 
+
+## Multidimensional Array
+
+JavaScript does not provide the multidimensional array natively. However, you can create a multidimensional array by defining an array of elements, where each element is also another array.
+
+For this reason, we can say that a JavaScript multidimensional array is an array of arrays. The easiest way to define a multidimensional array is to use the array literal notation.
+
+To declare an empty multidimensional array, you use the same syntax as declaring one-dimensional array:
+
+In the activities array, the first dimension represents the activity and the second one shows the number of hours spent per day for each.
+
+To show the activities array in the console, you use the console.table() method as follows
+
+```JS
+
+let activities = [];
+
+let activities = [
+    ['Work', 9],
+    ['Eat', 1],
+    ['Commute', 2],
+    ['Play Game', 1],
+    ['Sleep', 7]
+];
+
+console.table(activities);
+
+┌─────────┬─────────────┬───┐
+│ (index) │      0      │ 1 │
+├─────────┼─────────────┼───┤
+│    0    │   'Work'    │ 9 │
+│    1    │    'Eat'    │ 1 │
+│    2    │  'Commute'  │ 2 │
+│    3    │ 'Play Game' │ 1 │
+│    4    │   'Sleep'   │ 7 │
+└─────────┴─────────────┴───┘
+
+```
+Note that the (index) column is for the illustration that indicates the indices of the inner array.
+
+To access an element of the multidimensional array, you first use square brackets to access an element of the outer array that returns an inner array; and then use another square bracket to access the element of the inner array.
+
+The following example returns the second element of the first inner array in the activities array above:
+
+```JS
+
+console.log(activities[0][1]); // 9
+
+```
+
+## Adding elements to the JavaScript multidimensional array
+
+You can use the Array methods such as push() and splice() to manipulate elements of a multidimensional array.
+
+For example, to add a new element at the end of the multidimensional array, you use the push() method as follows:
+
+```JS
+activities.push(['Study',2]);
+
+console.table(activities);
+
+┌─────────┬─────────────┬───┐
+│ (index) │      0      │ 1 │
+├─────────┼─────────────┼───┤
+│    0    │   'Work'    │ 9 │
+│    1    │    'Eat'    │ 1 │
+│    2    │  'Commute'  │ 2 │
+│    3    │ 'Play Game' │ 1 │
+│    4    │   'Sleep'   │ 7 │
+│    5    │   'Study'   │ 2 │
+└─────────┴─────────────┴───┘
+
+```
+
+To insert an element in the middle of the array, you use the splice() method. The following inserts an element in the second position of the activities array:
+
+
+```JS
+
+activities.splice(1, 0, ['Programming', 2]);
+
+console.table(activities);
+
+┌─────────┬───────────────┬───┐
+│ (index) │       0       │ 1 │
+├─────────┼───────────────┼───┤
+│    0    │    'Work'     │ 9 │
+│    1    │ 'Programming' │ 2 │
+│    2    │     'Eat'     │ 1 │
+│    3    │   'Commute'   │ 2 │
+│    4    │  'Play Game'  │ 1 │
+│    5    │    'Sleep'    │ 7 │
+│    6    │    'Study'    │ 2 │
+└─────────┴───────────────┴───┘
+
+```
+
 ## Array methods and empty slots
 
 Empty slots in sparse arrays behave inconsistently between array methods. Generally, the older methods will skip empty slots, while newer ones treat them as undefined.
