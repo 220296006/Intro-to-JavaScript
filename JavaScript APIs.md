@@ -70,7 +70,6 @@ document.getElementById("myList").appendChild(node);
 
 The innerHTML property sets or returns the HTML content (inner HTML) of an element.
 
-
 ```JS
 
 let html = document.getElementById("myP").innerHTML;
@@ -142,7 +141,6 @@ Global functions are methods of the window object.
 
 Even the document object (of the HTML DOM) is a property of the window object:
 
-
 ```JS
 
 element.addEventListener("click", myFunction);
@@ -150,5 +148,29 @@ element.addEventListener("click", myFunction);
 function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
 }
+
+```
+
+## onload Event
+
+onload is most often used within the body element to execute a script once a web page has completely loaded all content (including images, script files, CSS files, etc.).
+
+The onload event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information.
+
+The onload event can also be used to deal with cookies (see "More Examples" below).
+
+```JS
+
+<body onload="myFunction()">
+
+```
+
+## Window scrollTo()
+
+The scrollTo() method scrolls the document to specified coordinates.
+
+```JS
+
+window.scrollTo(500, 0);
 
 ```
