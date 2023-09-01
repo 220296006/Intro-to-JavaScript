@@ -248,3 +248,4 @@ showMe(); // a hoisting example
 * Use the return statement to return a value from a function explicitly.
 * The arguments variable is an array-like object inside a function, representing function arguments.
 * The function hoisting allows you to call a function before declaring it.
+
