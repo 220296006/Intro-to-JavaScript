@@ -1,0 +1,109 @@
+<html>
+<head>
+<style>
+
+.warpper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  overflow: auto;
+}
+
+.tab {
+  float: left;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 25%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.tab:hover {
+  background-color: #c90000;
+  color: white;
+}
+
+.panels {
+  background: #fff;
+  min-height: 200px;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.panel-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel,
+#four:checked ~ .panels #four-panel{
+  display: block;
+}
+
+#one:checked ~ tab #one-tab,
+#two:checked ~ tab #two-tab,
+#three:checked ~ tab #three-tab,
+#four:checked ~ tab #four-tab{
+  background-color: #000000;
+  color: #ff0c0c;
+}
+</style>
+<body>
+<div class="warpper">
+  <input id="one" checked name="group" type="radio" />
+  <input id="two" name="group" type="radio" />
+  <input id="three" name="group" type="radio" />
+  <input id="four" name="group" type="radio" />
+<div class="navbar">
+  <div class="tabs">
+    <label class="tab" id="one-tab" for="one">Technical</label>
+    <label class="tab" id="two-tab" for="two">Business</label>
+    <label class="tab" id="three-tab" for="three">Cost</label>
+    <label class="tab" id="four-tab" for="four">Design</label>
+  </div>
+</div>
+
+  <div class="panels">
+    <div class="panel" id="one-panel">
+      <p>During technical inspection, the car is examined to ensure it meets rule and safety requirements. Inspection is sequentially divided into scrutineering, tilt, noise, and brake tests. After each test, a sticker is placed on the car, showing that it passed. The car cannot compete without passing technical inspection.<br/> 
+In the scrutineering phase of the inspection, judges investigate the car for any possible rule violations. During tilt, the car is placed on a tilt stand with a driver, where it is tilted towards the fuel tank fill nozzle. It must not spill fluids up to 45 degrees and must not roll over up to 60 degrees. For the noise test, the car’s noise output from the exhaust must meet the standards set in the FSAE Rulebook. The car is also tested to ensure the kill switch is functional. To pass the brake test, a driver must accelerate the car on a short straightaway and prove brake integrity by coming to a complete stop without spinning. All four wheels must lock, and the engine must still be running.</p>
+    </div>
+    <div class="panel" id="two-panel">
+      <p>The business logic case is a document each team must submit to the FSAE Committee. It summarizes the business case behind the plan for production on a larger scale. The document highlights the production scale, targeted market, profitability, and key features. <br/>The presentation is given to judges at competition, where two representatives from the team, usually the Business Lead and a business team member, showcase the car and team to potential “investors”. They must also be able to answer any questions the investors may ask. The judges should be treated as if they are executives at a corporation.</p>
+    </div>
+    <div class="panel" id="three-panel">
+      <p>A cost report must be created and submitted before competition, which lists the cost for every part and manufacturing process required to build a complete car for production. During the event, a team representative must defend any conflicting items judges find between the car and the document submitted beforehand. Any inconsistencies that cannot be explained will be penalized in the final score. Teams are scored based on the final adjusted cost to produce their car. In addition, a real case scenario is presented to the teams requiring them to respond to a cost overrun or other production issue.</p>
+    </div>
+    <div class="panel" id="four-panel">
+      <p>The design event is the most heavily weighted static event. The entire team explains and defends design choices, testing, and analysis that went into building the racecar. Judges, engineers who often work in the automotive industry, question team members on their choices, and attempt to challenge every position a team takes and every fact the team states. They want to see that a team has validated every design choice, such as intake shape, suspension point locations, tire sizes/type, engine calibration, and chassis design. <br/>
+        A design document is submitted to support this event, which members and judges refer to when going over each system. The team is scored based on how knowledgeable the members are, the appropriateness of the parts used, and overall fit-and-finish of the car.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
