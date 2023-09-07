@@ -9,7 +9,7 @@ The following illustrates the syntax of the switch statement:
 ```JS
 
 
-switch (expression) {
+switch (expression) { 
     case value1:
         statement1;
         break;
@@ -136,7 +136,7 @@ How it works.
 
 First, declare the day variable that holds the day number and the day name variable (dayName).
 
-Second, get the day of the week based on the day number using the switch statement. If the day is 1, the day of the week is Sunday. If the day is 2, the day of the week is Monday, and so on.
+Second, get the day of the week based on the day number using the switch statement. If the day is 1, the day of the week is Sunday. If the day is 2, the day of the week is Monday, and so on. 
 
 Third, output the day of the week to the console.
 
