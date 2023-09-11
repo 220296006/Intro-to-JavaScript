@@ -1,5 +1,4 @@
-#JavaScript onclick event
-
+# JavaScript onclick event
 
 The onclick event generally occurs when the user clicks on an element. It allows the programmer to execute a JavaScript's function when an element gets clicked. This event can be used for validating a form, warning messages and many more.
 
