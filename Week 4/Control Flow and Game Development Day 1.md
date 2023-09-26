@@ -9,9 +9,8 @@ Common Flowchart symbols:
 
 How it works?
 
-
 ![Alt text](image-1.png)
- 
+
 ## Rules for Creating Flowchart
 
 - Flowchart should contain conventional symbols.
